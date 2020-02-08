@@ -9,9 +9,9 @@ const Chat = ({ location }) => {
 
     useEffect(() => {
         // 1) Retrieve the data
-        const data = queryString.parse(location.search);
-        console.log(location.search); // Return URL params (?name=XXX&room=YYY)
-        console.log(data); // Object with the URL params ({"name": "XXX", "room": "YYY"})
+        const {name, room} = queryString.parse(location.search);
+        
+        console.log(name, room);
     });
 
     return (
